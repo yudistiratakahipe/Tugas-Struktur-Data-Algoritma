@@ -1,0 +1,12 @@
+import string
+
+def isPalindrome(s: str) -> bool:
+    # Buang semua karakter non-alfabet dan ubah ke huruf kecil
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    return cleaned == cleaned[::-1]
+
+# Contoh penggunaan
+print(isPalindrome("A man, a plan, a canal, Panama!"))  # Output: True
+print(isPalindrome("Was it a car or a cat I saw?"))     # Output: True
+print(isPalindrome("Hello, world!"))                     # Output: False
+print(isPalindrome("No lemon, no melon"))                # Output: True
